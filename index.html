@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contrôle des géloses</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="logo">◐</span>
+        <h1>Contrôle des géloses</h1>
+      </div>
+      <div class="meta">
+        <input
+          id="dossier"
+          placeholder="N° de dossier"
+          aria-label="N° de dossier"
+        />
+        <select id="val" aria-label="Valence">
+          <option>Newcastle VG</option>
+          <option>BI88 / H120</option>
+        </select>
+      </div>
+    </header>
+
+    <div class="hero"><nav id="tabs"></nav></div>
+    <main>
+      <section id="saisie">
+        <div id="form" class="glass"></div>
+        <aside id="res" class="glass" aria-live="polite"></aside>
+      </section>
+      <section id="ops" class="glass" hidden></section>
+    </main>
+    <footer>
+      <button id="print" class="btn">Imprimer la synthèse</button>
+      <button id="reset">Nouveau dossier</button>
+    </footer>
+    <div id="synth"></div>
+    <script src="operateurs.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
