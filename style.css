@@ -460,3 +460,91 @@ button:active {
     transition: none !important;
   }
 }
+
+/* ---- À coller tout à la fin de style.css ---- */
+
+/* Bouton activer / désactiver une étape */
+.hr {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.sw {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 8px;
+  font-size: 0.85rem;
+  color: var(--mut);
+}
+.sw i {
+  position: relative;
+  flex: none;
+  width: 34px;
+  height: 20px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.14);
+  transition: background 0.2s;
+}
+.sw i::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.2s;
+}
+.sw.on {
+  color: var(--acc);
+  border-color: rgba(196, 181, 253, 0.35);
+}
+.sw.on i {
+  background: var(--acc);
+}
+.sw.on i::after {
+  transform: translateX(14px);
+}
+
+/* Onglet d'une étape désactivée */
+.tab.dis {
+  opacity: 0.5;
+}
+.dot.off {
+  background: transparent;
+  border: 1px solid var(--mut);
+}
+.dot.skip {
+  background: #4a4668;
+}
+
+/* Pastilles de la synthèse */
+.pt {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+#synth .evt {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  font-size: 12px;
+}
+#synth .evt li {
+  margin-bottom: 3px;
+}
+#synth .leg {
+  font-size: 12px;
+}
+@media print {
+  #synth *,
+  #synth {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
