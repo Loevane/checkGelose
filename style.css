@@ -10,7 +10,7 @@
   --txt: #ecebf5;
   --mut: #8d8aa6;
   --acc: #c4b5fd;
-  --ops: #75a3bd;
+  --ops: #517c95;
   --chk: #fbbf4a;
   --ko: #ff6b7a;
 }
@@ -226,18 +226,15 @@ nav {
   border-radius: 50%;
   transition: background 0.3s;
 }
-.dot.none {
-  background: transparent;
-}
+.dot.none,
 .dot.off {
-  background: transparent;
-  border: 1px solid var(--mut);
-}
+  display: none;
+} /* aucune place réservée tant qu'il n'y a pas d'écart */
 
 /* ---------- Saisie ---------- */
 #saisie {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 16px;
 }
 .head {
