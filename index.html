@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
     <title>Contrôle des géloses</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- En-tête : n° de dossier et valence -->
     <header>
       <div class="brand">
-        <span class="logo">◐</span>
+        <img class="logo" src="favicon.png" alt="" />
         <h1>Contrôle des géloses</h1>
       </div>
       <div class="meta">
@@ -25,19 +28,27 @@
       </div>
     </header>
 
+    <!-- Onglets (générés par app.js) -->
     <div class="hero"><nav id="tabs"></nav></div>
+
     <main>
+      <!-- Saisie des heures + écarts détectés -->
       <section id="saisie">
         <div id="form" class="glass"></div>
         <aside id="res" class="glass" aria-live="polite"></aside>
       </section>
+      <!-- Liste des opérateurs (consultation) -->
       <section id="ops" class="glass" hidden></section>
     </main>
+
     <footer>
       <button id="print" class="btn">Imprimer la synthèse</button>
       <button id="reset">Nouveau dossier</button>
     </footer>
+
+    <!-- Synthèse : visible uniquement à l'impression -->
     <div id="synth"></div>
+
     <script src="operateurs.js"></script>
     <script src="app.js"></script>
   </body>
